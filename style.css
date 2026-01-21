@@ -248,20 +248,33 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-black);
+    background-color: var(--color-deep-blue);
     padding-top: var(--header-height);
     position: relative;
     overflow: hidden;
 }
 
-/* Subtle background texture */
+/* Gradient background with grid pattern */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
+    background-image: 
+        linear-gradient(rgba(252, 163, 17, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(252, 163, 17, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: 
-        radial-gradient(ellipse at 20% 50%, rgba(252, 163, 17, 0.05) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(20, 33, 61, 0.3) 0%, transparent 50%);
+        radial-gradient(ellipse at 30% 20%, rgba(252, 163, 17, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(20, 33, 61, 0.8) 0%, transparent 50%),
+        linear-gradient(180deg, var(--color-black) 0%, var(--color-deep-blue) 50%, var(--color-deep-blue) 100%);
     pointer-events: none;
 }
 
@@ -452,61 +465,179 @@ img {
     letter-spacing: 0.1em;
 }
 
+/* Portfolio Logo (centered below videos) */
+.portfolio-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-light-grey);
+}
+
+.portfolio-logo-svg {
+    opacity: 0.8;
+    transition: opacity var(--transition-base);
+}
+
+.portfolio-logo-svg:hover {
+    opacity: 1;
+}
+
 /* ============================================
-   FOOTER / CONTACT
+   CONTACT SECTION
+============================================= */
+.contact {
+    position: relative;
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-deep-blue);
+    overflow: hidden;
+}
+
+.contact-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.contact-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 80% 20%, rgba(252, 163, 17, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 80%, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-label-light {
+    color: var(--color-accent);
+}
+
+.contact-title {
+    color: var(--color-white);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-subtitle {
+    color: var(--color-light-grey);
+    font-size: 1.125rem;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    min-width: 250px;
+}
+
+.contact-link:hover {
+    background-color: rgba(252, 163, 17, 0.1);
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.contact-link-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.contact-link-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-black);
+}
+
+.contact-link-text {
+    text-align: left;
+}
+
+.contact-link-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+}
+
+.contact-link-value {
+    display: block;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-link:hover .contact-link-value {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   FOOTER
 ============================================= */
 .footer {
-    background-color: var(--color-deep-blue);
-    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+    background-color: var(--color-black);
+    padding: var(--spacing-lg) 0;
 }
 
 .footer-content {
-    text-align: center;
-}
-
-.footer-title {
-    color: var(--color-white);
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 600;
-    margin-bottom: var(--spacing-xl);
-}
-
-/* Footer Links */
-.footer-links {
     display: flex;
-    justify-content: center;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.footer-link {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--color-white);
-    font-size: 0.875rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-base);
-}
-
-.footer-link:hover {
-    color: var(--color-accent);
-    border-color: var(--color-accent);
-    background-color: rgba(252, 163, 17, 0.1);
-}
-
-.footer-icon {
-    width: 20px;
-    height: 20px;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
 }
 
 .footer-copyright {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.875rem;
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.875rem;
+}
+
+.heart {
+    color: var(--color-accent);
 }
 
 /* ============================================
@@ -587,16 +718,21 @@ img {
         gap: var(--spacing-md);
     }
     
-    /* Footer links stack */
-    .footer-links {
+    /* Contact links stack */
+    .contact-links {
         flex-direction: column;
         align-items: center;
     }
     
-    .footer-link {
+    .contact-link {
         width: 100%;
-        max-width: 250px;
-        justify-content: center;
+        max-width: 350px;
+    }
+    
+    /* Footer stack */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
