@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Video Editor Portfolio - Creative storytelling through visual media">
+    
+    <title>Creative Video Editor | Portfolio</title>
+    
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION
+         Fixed navigation bar with smooth scroll
+    ============================================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- EDIT: Change your logo/name here -->
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">[</span>YourName<span class="logo-bracket">]</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         Main introduction with dark background
+    ============================================= -->
+    <header id="home" class="hero">
+        <div class="hero-background">
+            <!-- Decorative elements -->
+            <div class="hero-grid"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <!-- EDIT: Change your main headline here -->
+            <p class="hero-tagline">Hello, I'm</p>
+            <h1 class="hero-title">
+                <span class="title-line">Creative</span>
+                <span class="title-line title-accent">Video Editor</span>
+            </h1>
+            
+            <!-- EDIT: Change your subtitle/description here -->
+            <p class="hero-subtitle">
+                Crafting compelling visual stories that captivate audiences 
+                and bring your creative vision to life.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         PORTFOLIO SECTION
+         Grid layout for video showcases
+    ============================================= -->
+    <main id="portfolio" class="portfolio">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-subtitle">
+                    A curated collection of my recent video editing projects, 
+                    showcasing storytelling across various styles and genres.
+                </p>
+            </div>
+            
+            <!-- Video Grid -->
+            <div class="video-grid">
+                
+                <!-- VIDEO 1 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 1"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Brand Commercial</h3>
+                        <p class="video-category">Commercial · 2024</p>
+                    </div>
+                </article>
+                
+                <!-- VIDEO 2 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 2"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Music Video Edit</h3>
+                        <p class="video-category">Music · 2024</p>
+                    </div>
+                </article>
+                
+                <!-- VIDEO 3 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 3"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Documentary Short</h3>
+                        <p class="video-category">Documentary · 2024</p>
+                    </div>
+                </article>
+                
+                <!-- VIDEO 4 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 4"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Social Media Campaign</h3>
+                        <p class="video-category">Social · 2023</p>
+                    </div>
+                </article>
+                
+                <!-- VIDEO 5 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 5"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Event Highlight Reel</h3>
+                        <p class="video-category">Event · 2023</p>
+                    </div>
+                </article>
+                
+                <!-- VIDEO 6 -->
+                <!-- EDIT: Replace the YouTube embed URL with your own video -->
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Project Title 6"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <!-- EDIT: Change project title and category -->
+                        <h3 class="video-title">Product Launch</h3>
+                        <p class="video-category">Commercial · 2023</p>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================
+         CONTACT SECTION
+         Call-to-action with social links
+    ============================================= -->
+    <section id="contact" class="contact">
+        <div class="contact-background">
+            <div class="contact-gradient"></div>
+        </div>
+        
+        <div class="container">
+            <div class="contact-content">
+                <!-- Section Header -->
+                <span class="section-label section-label-light">Contact</span>
+                <h2 class="contact-title">Let's Collaborate</h2>
+                <p class="contact-subtitle">
+                    Have a project in mind? I'd love to hear about it. 
+                    Let's create something extraordinary together.
+                </p>
+                
+                <!-- Contact Links -->
+                <div class="contact-links">
+                    
+                    <!-- EDIT: Replace with your actual email address -->
+                    <a href="mailto:hello@youremail.com" class="contact-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <span class="contact-link-label">Email</span>
+                            <span class="contact-link-value">hello@youremail.com</span>
+                        </div>
+                    </a>
+                    
+                    <!-- EDIT: Replace with your Twitter/X profile URL -->
+                    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <span class="contact-link-label">Twitter / X</span>
+                            <span class="contact-link-value">@yourhandle</span>
+                        </div>
+                    </a>
+                    
+                    <!-- EDIT: Replace with your LinkedIn profile URL -->
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <span class="contact-link-label">LinkedIn</span>
+                            <span class="contact-link-value">Connect with me</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         Simple copyright footer
+    ============================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- EDIT: Change your name/copyright info here -->
+                <p class="footer-copyright">
+                    © 2024 YourName. All rights reserved.
+                </p>
+                <p class="footer-tagline">
+                    Designed with <span class="heart">♥</span> for visual storytelling
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         Mobile menu toggle and smooth scroll
+    ============================================= -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+        
+        // Navbar background on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe video cards for staggered animation
+        document.querySelectorAll('.video-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
