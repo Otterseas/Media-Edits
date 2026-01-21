@@ -428,7 +428,7 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
 
@@ -438,31 +438,6 @@
             overflow: hidden;
             border: 1px solid transparent;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Irregular grid layout - editorial magazine style */
-        .video-card:nth-child(1) {
-            grid-column: span 7;
-        }
-
-        .video-card:nth-child(2) {
-            grid-column: span 5;
-        }
-
-        .video-card:nth-child(3) {
-            grid-column: span 5;
-        }
-
-        .video-card:nth-child(4) {
-            grid-column: span 7;
-        }
-
-        .video-card:nth-child(5) {
-            grid-column: span 8;
-        }
-
-        .video-card:nth-child(6) {
-            grid-column: span 4;
         }
 
         .video-card:hover {
@@ -692,13 +667,8 @@
            RESPONSIVE
         ============================================= */
         @media (max-width: 1024px) {
-            .video-card:nth-child(1),
-            .video-card:nth-child(2),
-            .video-card:nth-child(3),
-            .video-card:nth-child(4),
-            .video-card:nth-child(5),
-            .video-card:nth-child(6) {
-                grid-column: span 6;
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -738,13 +708,8 @@
                 columns: 1;
             }
 
-            .video-card:nth-child(1),
-            .video-card:nth-child(2),
-            .video-card:nth-child(3),
-            .video-card:nth-child(4),
-            .video-card:nth-child(5),
-            .video-card:nth-child(6) {
-                grid-column: span 12;
+            .video-grid {
+                grid-template-columns: 1fr;
             }
 
             .portfolio-header-wrapper {
@@ -834,36 +799,25 @@
             <div>
                 <div class="bio-label">About</div>
                 <div class="bio-content">
-                    <!-- EDIT: Update your bio text here -->
                     <p>
-                        With over 8 years of experience in post-production, I bring stories to life 
-                        through precise cuts, dynamic pacing, and thoughtful color grading. My approach 
-                        combines technical mastery with creative intuition.
+                        Video editor specializing in short-form content, interviews, and underwater 
+                        cinematography. Currently building a portfolio of work that spans social media, 
+                        documentary-style pieces, and cinematic dive edits.
                     </p>
                     <p>
-                        I've worked across multiple formats—from branded content and documentaries to 
-                        music videos and short films. Each project is an opportunity to push boundaries 
-                        and discover new ways to engage audiences.
-                    </p>
-                    <p>
-                        Whether it's a 15-second social cut or a feature-length narrative, my goal 
-                        remains the same: create work that feels authentic, impactful, and unforgettable.
+                        Always learning. Always refining. Ready for the next project.
                     </p>
                 </div>
             </div>
             <div class="bio-aside">
-                <!-- EDIT: Update your stats here -->
                 <div class="bio-stat">
-                    <div class="bio-stat-number">8+</div>
-                    <div class="bio-stat-label">Years Experience</div>
+                    <div class="bio-stat-label">Short-Form Content</div>
                 </div>
                 <div class="bio-stat">
-                    <div class="bio-stat-number">150+</div>
-                    <div class="bio-stat-label">Projects Delivered</div>
+                    <div class="bio-stat-label">Interview Edits</div>
                 </div>
                 <div class="bio-stat">
-                    <div class="bio-stat-number">30+</div>
-                    <div class="bio-stat-label">Client Partnerships</div>
+                    <div class="bio-stat-label">Underwater Specialist</div>
                 </div>
             </div>
         </div>
